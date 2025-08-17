@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nayeli ❤️</title>
+<style>
+body {
+font-family: sans-serif;
+text-align: center;
+}
+#turtleCanvas {
+border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<h1>Nayeli ❤️</h1>
+<canvas id="turtleCanvas" width="400" height="300"></canvas>
+<script src="turtle.js"></script>
+<script>
+const canvas = document.getElementById('turtleCanvas');
+const turtle = new Turtle(canvas);
+turtle.speed(2); // Velocidad del dibujo (1-10, 0 para la más rápida)
+turtle.penup();
+turtle.goto(-50, -50);
+turtle.pendown();
+turtle.pencolor(&#39;blue&#39;);
+turtle.pensize(3);
+
+// Dibujar una forma básica de &quot;furia luminosa&quot; (puedes personalizar esto)
+turtle.begin_fill();
+turtle.fillcolor(&#39;lightblue&#39;);
+for (let i = 0; i &lt; 36; i++) {
+  turtle.forward(100);
+  turtle.right(170);
+}
+turtle.end_fill();
+
+// Puedes añadir más detalles al dibujo aquí
+</script>
+</body>
+</html>
