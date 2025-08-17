@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Nayeli ❤️</title>
-<style>
-  body {
-    background-color: #121212; /* Fondo negro oscuro */
-    color: #f0c2f3; /* Texto color pastel */
-    font-family: sans-serif;
-    text-align: center;
-  }
-  #turtleCanvas {
-    background-color: #212121; /* Fondo del canvas un poco más claro */
-    border: 1px solid #f0c2f3;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayeli ❤️</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #f0c2f3; /* Color pastel para el texto */
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Empezar desde la parte superior */
+            min-height: 100vh; /* Asegurar que el fondo cubra toda la pantalla */
+            background-image: url('dragon_bg.jpg'); /* Reemplaza con tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .tiara-container {
+            width: 80%; /* Ajusta el ancho de la imagen para móviles */
+            max-width: 300px; /* Ancho máximo para pantallas más grandes */
+            margin-bottom: 20px;
+        }
+
+        .tiara-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #d3d3d3; /* Color plateado suave */
+        }
+
+        /* Opcional: Animación suave para el texto */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>Nayeli ❤️</h1>
-
-  <canvas id="turtleCanvas" width="400" height="400"></canvas>
-
-  <script src="turtle.js"></script>
-  <script>
-    const canvas = document.getElementById('turtleCanvas');
-    const turtle = new Turtle(canvas);
-
-    turtle.speed(8);
-    turtle.penup();
-    turtle.goto(0, -100);
-    turtle.pendown();
-    turtle.pencolor('#FF69B4');
-    turtle.fillcolor('#FF1493');
-    turtle.pensize(3);
-    turtle.begin_fill();
-    turtle.left(140);
-    turtle.forward(180);
-    turtle.circle(-90, 200);
-    turtle.setheading(210);
-    turtle.circle(-90, 200);
-    turtle.forward(180);
-    turtle.end_fill();
-
-  </script>
-
+    <div class="container">
+        <div class="tiara-container">
+            <img src="tiara.png" alt="Tiara de Princesa Plateada">
+        </div>
+        <h1>Nayeli ❤️</h1>
+    </div>
 </body>
 </html>
