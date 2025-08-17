@@ -44,12 +44,12 @@
     turtle.pencolor('#9c27b0');
     turtle.fillcolor('#e0b0ff');
     turtle.pensize(2);
-    turtle.goto(0, 0);
     for (let i = 0; i < 18; i++) {
-        turtle.setheading(i * 20);
         turtle.penup();
-        turtle.forward(20);
+        turtle.goto(0, 0);
         turtle.pendown();
+        turtle.setheading(i * 20);
+        turtle.forward(20);
         turtle.begin_fill();
         turtle.forward(50);
         turtle.right(150);
