@@ -4,13 +4,13 @@
 <title>Nayeli ❤️</title>
 <style>
   body {
-    background-color: #121212; /* Fondo negro oscuro */
-    color: #f0c2f3; /* Texto color pastel */
+    background-color: #121212;
+    color: #f0c2f3;
     font-family: sans-serif;
     text-align: center;
   }
   #turtleCanvas {
-    background-color: #212121; /* Fondo del canvas un poco más claro */
+    background-color: #212121;
     border: 1px solid #f0c2f3;
   }
 </style>
@@ -26,25 +26,17 @@
     const canvas = document.getElementById('turtleCanvas');
     const turtle = new Turtle(canvas);
 
-    // Dibuja una flor
-    turtle.speed(8);
-    turtle.pencolor('#f0c2f3');
+    // Dibuja un cuadrado de prueba
+    turtle.pencolor('white');
     turtle.pensize(2);
-    
-    // Centro de la flor
-    turtle.penup();
-    turtle.goto(0, -30);
-    turtle.pendown();
-    turtle.begin_fill();
-    turtle.fillcolor('#ffeb3b');
-    for (let i = 0; i < 36; i++) {
-        turtle.forward(5);
-        turtle.left(10);
-    }
-    turtle.end_fill();
+    turtle.forward(100);
+    turtle.right(90);
+    turtle.forward(100);
+    turtle.right(90);
+    turtle.forward(100);
+    turtle.right(90);
+    turtle.forward(100);
+  </script>
 
-    // Pétalos de la flor
-    turtle.penup();
-    turtle.goto(0, -30);
-    turtle.pendown();
-    turtle.pencolor('#9c27b0');
+</body>
+</html>
