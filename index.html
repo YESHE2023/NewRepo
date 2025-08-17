@@ -28,43 +28,59 @@
 
     turtle.speed(8);
 
-    // Dibuja el centro de la flor
+    // Dibuja los pétalos de atrás (rosado oscuro)
     turtle.penup();
-    turtle.goto(0, 0);
+    turtle.goto(0, -50);
     turtle.pendown();
-    turtle.begin_fill();
-    turtle.fillcolor('#ffeb3b');
+    turtle.pencolor('#d87093');
+    turtle.fillcolor('#ffb6c1');
+    turtle.pensize(2);
+    for (let i = 0; i < 6; i++) {
+        turtle.begin_fill();
+        turtle.right(60);
+        turtle.forward(120);
+        turtle.right(150);
+        turtle.forward(120);
+        turtle.end_fill();
+    }
+    
+    // Dibuja los pétalos del frente (rosado más claro)
+    turtle.penup();
+    turtle.goto(0, -30);
+    turtle.pendown();
+    turtle.pencolor('#f4a2ad');
+    turtle.fillcolor('#fff0f5');
+    turtle.pensize(2);
+    for (let i = 0; i < 6; i++) {
+        turtle.begin_fill();
+        turtle.right(60);
+        turtle.forward(90);
+        turtle.right(150);
+        turtle.forward(90);
+        turtle.end_fill();
+    }
+
+    // Dibuja el centro
+    turtle.penup();
+    turtle.goto(0, -20);
+    turtle.pendown();
+    turtle.pencolor('#ffff99');
+    turtle.fillcolor('#ffff00');
+    turtle.pensize(2);
     for (let i = 0; i < 36; i++) {
-      turtle.forward(10);
+      turtle.forward(5);
       turtle.left(10);
     }
     turtle.end_fill();
 
-    // Dibuja los pétalos
-    turtle.pencolor('#9c27b0');
-    turtle.fillcolor('#e0b0ff');
-    turtle.pensize(2);
-    for (let i = 0; i < 18; i++) {
-        turtle.penup();
-        turtle.goto(0, 0);
-        turtle.pendown();
-        turtle.setheading(i * 20);
-        turtle.forward(20);
-        turtle.begin_fill();
-        turtle.forward(50);
-        turtle.right(150);
-        turtle.forward(50);
-        turtle.end_fill();
-    }
-    
     // Dibuja el tallo
     turtle.penup();
-    turtle.goto(0, -20);
+    turtle.goto(0, -100);
     turtle.pendown();
     turtle.setheading(270);
     turtle.pencolor('#4caf50');
     turtle.pensize(4);
-    turtle.forward(120);
+    turtle.forward(100);
 
   </script>
 
