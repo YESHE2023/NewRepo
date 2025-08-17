@@ -27,60 +27,20 @@
     const turtle = new Turtle(canvas);
 
     turtle.speed(8);
-
-    // Dibuja los pétalos de atrás (rosado oscuro)
-    turtle.penup();
-    turtle.goto(0, -50);
-    turtle.pendown();
-    turtle.pencolor('#d87093');
-    turtle.fillcolor('#ffb6c1');
-    turtle.pensize(2);
-    for (let i = 0; i < 6; i++) {
-        turtle.begin_fill();
-        turtle.right(60);
-        turtle.forward(120);
-        turtle.right(150);
-        turtle.forward(120);
-        turtle.end_fill();
-    }
-    
-    // Dibuja los pétalos del frente (rosado más claro)
-    turtle.penup();
-    turtle.goto(0, -30);
-    turtle.pendown();
-    turtle.pencolor('#f4a2ad');
-    turtle.fillcolor('#fff0f5');
-    turtle.pensize(2);
-    for (let i = 0; i < 6; i++) {
-        turtle.begin_fill();
-        turtle.right(60);
-        turtle.forward(90);
-        turtle.right(150);
-        turtle.forward(90);
-        turtle.end_fill();
-    }
-
-    // Dibuja el centro
-    turtle.penup();
-    turtle.goto(0, -20);
-    turtle.pendown();
-    turtle.pencolor('#ffff99');
-    turtle.fillcolor('#ffff00');
-    turtle.pensize(2);
-    for (let i = 0; i < 36; i++) {
-      turtle.forward(5);
-      turtle.left(10);
-    }
-    turtle.end_fill();
-
-    // Dibuja el tallo
     turtle.penup();
     turtle.goto(0, -100);
     turtle.pendown();
-    turtle.setheading(270);
-    turtle.pencolor('#4caf50');
-    turtle.pensize(4);
-    turtle.forward(100);
+    turtle.pencolor('#FF69B4');
+    turtle.fillcolor('#FF1493');
+    turtle.pensize(3);
+    turtle.begin_fill();
+    turtle.left(140);
+    turtle.forward(180);
+    turtle.circle(-90, 200);
+    turtle.setheading(210);
+    turtle.circle(-90, 200);
+    turtle.forward(180);
+    turtle.end_fill();
 
   </script>
 
