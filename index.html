@@ -3,68 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayeli ❤️</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #f0c2f3; /* Color pastel para el texto */
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Empezar desde la parte superior */
-            min-height: 100vh; /* Asegurar que el fondo cubra toda la pantalla */
-            background-image: url('universo2.jpg'); /* Reemplaza con tu imagen */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .tiara-container {
-            width: 80%; /* Ajusta el ancho de la imagen para móviles */
-            max-width: 300px; /* Ancho máximo para pantallas más grandes */
-            margin-bottom: 20px;
-        }
-
-        .tiara-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            color: #FFFFFF; /* Color plateado suave */
-        }
-
-        /* Opcional: Animación suave para el texto */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        h1 {
-            animation: fadeIn 1s ease-in-out;
-        }
-    </style>
+    <title>Para Nayeli: Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
-        <div class="tiara-container">
-            <img src="tiara.png" alt="Tiara de Princesa Plateada">
+        <h1>¡Hola, Nayeli ❤️! Juega conmigo...</h1>
+        <h2 id="subtitle">Piedra, Papel o Tijera</h2>
+
+        <div class="choices">
+            <button id="rock" class="choice-btn">
+                <img src="https://img.icons8.com/plasticine/100/rock.png" alt="Piedra">
+            </button>
+            <button id="paper" class="choice-btn">
+                <img src="https://img.icons8.com/plasticine/100/paper-plane.png" alt="Papel">
+            </button>
+            <button id="scissors" class="choice-btn">
+                <img src="https://img.icons8.com/plasticine/100/scissors.png" alt="Tijera">
+            </button>
         </div>
-        <h1>Nayeli ❤️</h1>
+
+        <div class="result">
+            <p id="player-choice-text">Tú elegiste:</p>
+            <p id="computer-choice-text">Yo elegí:</p>
+            <h3 id="result-text">¡Elige tu movimiento!</h3>
+        </div>
+
+        <button id="reset-btn">Jugar de nuevo</button>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
