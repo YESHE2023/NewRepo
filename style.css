@@ -1,75 +1,158 @@
+/* Estilos generales del cuerpo de la página */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Alinea al inicio para que el contenido no quede en el centro de la pantalla */
+    min-height: 100vh;
     margin: 0;
-    background-color: #f7f1e3; /* Fondo color crema muy claro */
-    color: #333;
-    text-align: center;
+    padding: 20px;
+    background-color: #fce4ec; /* Rosa muy pálido para el fondo */
+    color: #4a4a4a;
 }
 
+/* Contenedor principal del sitio */
 .container {
-    padding: 30px 50px;
-    background-color: #ffb6c1; /* Rosa pastel */
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    padding: 30px 40px;
+    background-color: #fff0f5; /* Rosa claro para el contenedor */
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h1 {
     font-size: 2.5em;
-    color: #e84393; /* Rosa más intenso para el título */
+    color: #e91e63; /* Un rosa intenso para el título */
     margin-bottom: 5px;
 }
 
-#subtitle {
-    color: #d63031;
+.subtitle {
+    color: #880e4f;
+    font-size: 1.2em;
     margin-top: 0;
+    margin-bottom: 30px;
 }
 
-.choices {
+/* Estilos para los botones de las flores */
+.flower-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 30px 0;
+    margin-bottom: 40px;
 }
 
-.choice-btn {
-    background-color: #ffe6e6; /* Rosa muy claro */
-    border: 3px solid #ff7675; /* Borde rosa más oscuro */
-    border-radius: 50%;
-    padding: 10px;
+.flower-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #ffc0cb; /* Rosa pastel estándar */
+    color: #e91e63;
 }
 
-.choice-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(255, 118, 117, 0.5);
+.flower-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(255, 192, 203, 0.7);
 }
 
-.choice-btn img {
-    width: 80px;
-    height: 80px;
+/* Estilos del jardín de emociones */
+#emotion-garden {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 150px;
+    background-color: #fffafa; /* Casi blanco para el fondo del jardín */
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px dashed #ffc0cb; /* Borde punteado para un toque de jardín */
 }
 
-.result {
-    margin: 20px 0;
-    font-size: 1.2em;
-    font-weight: bold;
+/* Estilos para cada flor */
+.flower {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: bloom 1s ease-out forwards;
 }
 
-#result-text {
-    font-size: 2em;
-    color: #e84393;
+/* Animación para cuando la flor aparece */
+@keyframes bloom {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Colores para cada tipo de flor */
+.flower.sad {
+    background-color: #bbdefb; /* Azul muy pálido */
+}
+.flower.calm {
+    background-color: #e1bee7; /* Lila pálido */
+}
+.flower.happy {
+    background-color: #fff59d; /* Amarillo suave */
+}
+
+/* Estilos de la sección de mensajes */
+.mood-messages, .diary-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffebee; /* Rosa un poco más claro */
+    border-radius: 15px;
+}
+
+#get-message-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #f06292; /* Rosa medio */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
     margin-top: 10px;
 }
 
-#reset-btn {
+#get-message-btn:hover {
+    background-color: #e91e63;
+}
+
+/* Estilos del diario */
+.diary-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 95%;
+    min-height: 80px;
+    padding: 10px;
+    border: 2px solid #ffc0cb;
+    border-radius: 10px;
+    resize: vertical;
+}
+
+#save-entry-btn {
+    align-self: flex-end;
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #ff7675;
+    background-color: #d63031; /* Un rojo para destacar */
     color: white;
     border: none;
     border-radius: 10px;
@@ -77,6 +160,29 @@ h1 {
     transition: background-color 0.2s;
 }
 
-#reset-btn:hover {
-    background-color: #ff4757;
+#save-entry-btn:hover {
+    background-color: #c0392b;
+}
+
+.diary-entry {
+    background-color: #fff8e1; /* Fondo de entrada de diario */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-left: 5px solid;
+}
+
+/* Colores del borde de la entrada según la flor */
+.diary-entry.sad { border-color: #bbdefb; }
+.diary-entry.calm { border-color: #e1bee7; }
+.diary-entry.happy { border-color: #fff59d; }
+
+.diary-entry h4 {
+    margin: 0 0 5px 0;
+    color: #e91e63;
+}
+.diary-entry p {
+    margin: 0;
+    color: #4a4a4a;
 }
