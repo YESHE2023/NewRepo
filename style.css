@@ -3,7 +3,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinea al inicio para que el contenido no quede en el centro de la pantalla */
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
     padding: 20px;
@@ -73,7 +73,7 @@ h1 {
     border: 1px dashed #ffc0cb; /* Borde punteado para un toque de jardín */
 }
 
-/* Estilos para cada flor */
+/* Estilos para cada flor (círculo) */
 .flower {
     width: 60px;
     height: 60px;
@@ -82,6 +82,20 @@ h1 {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     animation: bloom 1s ease-out forwards;
+    background-size: cover; /* Ajusta la imagen para que cubra el círculo */
+    background-position: center; /* Centra la imagen */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Colores y flores para cada tipo de emoción */
+.flower.sad {
+    background-image: url('flor_tristeza.png');
+}
+.flower.calm {
+    background-image: url('flor_calma.png');
+}
+.flower.happy {
+    background-image: url('flor_alegria.png');
 }
 
 /* Animación para cuando la flor aparece */
@@ -94,17 +108,6 @@ h1 {
         transform: scale(1);
         opacity: 1;
     }
-}
-
-/* Colores para cada tipo de flor */
-.flower.sad {
-    background-color: #bbdefb; /* Azul muy pálido */
-}
-.flower.calm {
-    background-color: #e1bee7; /* Lila pálido */
-}
-.flower.happy {
-    background-color: #fff59d; /* Amarillo suave */
 }
 
 /* Estilos de la sección de mensajes */
