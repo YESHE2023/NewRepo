@@ -189,3 +189,19 @@ textarea {
     margin: 0;
     color: #4a4a4a;
 }
+
+.whatsapp-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Verde más oscuro al pasar el mouse */
+}
