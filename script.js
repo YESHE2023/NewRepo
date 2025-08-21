@@ -120,7 +120,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     // Función para generar y enviar el resumen por WhatsApp
-    const sendWhatsappSummary = () => {
+const sendWhatsappSummary = () => {
+    // **IMPORTANTE**: Reemplaza "TU_NUMERO_DE_TELEFONO" con tu número.
+    const yourPhoneNumber = "51906464923"; // EJEMPLO: "51987654321"
+    
         // 1. Crear el encabezado del mensaje
         let summaryText = "💌 Resumen de nuestro Jardín de Emociones 🌸\n\n";
 
@@ -150,12 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // 5. Codificar el texto para que sea seguro en un enlace URL
         const encodedText = encodeURIComponent(summaryText);
 
-        // 6. Construir el enlace de WhatsApp
-        const whatsappUrl = `https://web.whatsapp.com/send?text=${encodedText}`;
+        // 6. Construir el enlace de WhatsApp incluyendo el número de teléfono
+        const whatsappUrl = `https://wa.me/${yourPhoneNumber}?text=${encodedText}`;
 
         // 7. Abrir el enlace en una nueva pestaña
         window.open(whatsappUrl, '_blank');
-    };
+};
 
     // 6. Asignación de eventos
     plantSadBtn.addEventListener('click', () => plantFlower('sad'));
