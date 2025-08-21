@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Nayeli: Piedra, Papel o Tijera</title>
+    <title>Nuestro Jardín Secreto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>¡Hola, Nayeli ❤️! Juega conmigo...</h1>
-        <h2 id="subtitle">Piedra, Papel o Tijera</h2>
+        <h1>Nuestro Jardín Secreto</h1>
+        <p class="subtitle">Un espacio para nuestros sentimientos.</p>
 
-        <div class="choices">
-            <button id="piedra" class="choice-btn">
-                <img src="https://img.icons8.com/plasticine/100/rock.png" alt="Piedra">
-            </button>
-            <button id="papel" class="choice-btn">
-                <img src="https://img.icons8.com/plasticine/100/paper-plane.png" alt="Papel">
-            </button>
-            <button id="tijera" class="choice-btn">
-                <img src="https://img.icons8.com/plasticine/100/scissors.png" alt="Tijera">
-            </button>
+        <div class="flower-buttons">
+            <button id="plant-sad" class="flower-button">Plantar Tristeza 💙</button>
+            <button id="plant-calm" class="flower-button">Plantar Calma 🌸</button>
+            <button id="plant-happy" class="flower-button">Plantar Alegría ☀️</button>
         </div>
 
-        <div class="result">
-            <p id="player-choice-text">Tú elegiste:</p>
-            <p id="computer-choice-text">Yo elegí:</p>
-            <h3 id="result-text">¡Elige tu movimiento!</h3>
+        <div id="emotion-garden">
+            </div>
+
+        <div class="mood-messages">
+            <h3>Mensaje para Ti</h3>
+            <p id="random-message">Haz clic para recibir un mensaje.</p>
+            <button id="get-message-btn">Obtener Mensaje</button>
         </div>
 
-        <button id="reset-btn">Jugar de nuevo</button>
+        <div class="diary-section">
+            <h3>Nuestro Diario de Sentimientos</h3>
+            <div id="diary-entries">
+                </div>
+            <div class="diary-input">
+                <label for="flower-id">Selecciona una flor del jardín:</label>
+                <select id="flower-id"></select>
+                <textarea id="diary-text" placeholder="Escribe aquí tu sentimiento..."></textarea>
+                <button id="save-entry-btn">Guardar Entrada</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
